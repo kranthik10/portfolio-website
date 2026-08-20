@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${fraunces.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-[#1c1712] font-sans text-[#efe6d6]">
+      <body className="min-h-full bg-[#0c0b0e] font-sans text-[#efe6d6]">
         {children}
       </body>
     </html>

@@ -54,7 +54,7 @@ export function Experience() {
 
   return (
     <ExperienceProvider active={active} setActive={setActive}>
-      <div className="relative h-dvh w-full overflow-hidden bg-[#1c1712]">
+      <div className="relative h-dvh w-full overflow-hidden bg-[#0c0b0e]">
         {webglFailed ? (
           <WebGlFallback />
         ) : (
@@ -66,6 +66,10 @@ export function Experience() {
         )}
         {booting && !webglFailed ? <BootScreen /> : null}
         {!booting && !webglFailed ? <Hud /> : null}
+        <div
+          className="pointer-events-none absolute inset-0 z-[5] bg-[radial-gradient(ellipse_at_center,transparent_42%,rgba(8,6,8,0.55)_100%)]"
+          aria-hidden
+        />
         <SectionPanel />
       </div>
     </ExperienceProvider>

@@ -17,8 +17,8 @@ export function Hotspot({
   const { active, openSection } = useExperience();
   const [hovered, setHovered] = useState(false);
   const selected = active === id;
-  const lift = hovered || selected ? 0.04 : 0;
-  const scale = hovered || selected ? 1.025 : 1;
+  const isWall = id === "writing" || id === "location";
+  const lift = !isWall && (hovered || selected) ? 0.025 : 0;
   const anchor = hotspotAnchors[id];
 
   useEffect(() => {
@@ -30,7 +30,6 @@ export function Hotspot({
   return (
     <group
       position={[anchor.position[0], anchor.position[1] + lift, anchor.position[2]]}
-      scale={scale}
       onClick={(event) => {
         event.stopPropagation();
         openSection(id);
@@ -61,10 +60,10 @@ export function Hotspot({
         style={{ pointerEvents: "none" }}
       >
         <span
-          className={`whitespace-nowrap rounded-full px-2 py-0.5 text-[10px] tracking-wide uppercase ${
+          className={`whitespace-nowrap rounded-full px-2.5 py-0.5 text-[9px] tracking-[0.14em] uppercase ${
             hovered || selected
-              ? "bg-[#efe6d6] text-[#2a2118]"
-              : "bg-black/45 text-[#efe6d6]"
+              ? "bg-[#efe6d6] text-[#2a2118] shadow-[0_8px_24px_rgba(0,0,0,0.35)]"
+              : "bg-[#0c0b0e]/55 text-[#efe6d6]/90 backdrop-blur-sm"
           }`}
         >
           {site.sections[id].label}

@@ -193,12 +193,12 @@ export const cameraViews: Record<
   SectionId | "home",
   { position: [number, number, number]; target: [number, number, number] }
 > = {
-  home: { position: [6.35, 3.85, 7.15], target: [0.1, 1.35, -0.45] },
-  about: { position: [-0.85, 2.15, 1.35], target: [-4.05, 1.45, -1.85] },
-  work: { position: [0.55, 2.25, -0.55], target: [0.55, 0.85, -3.35] },
-  awards: { position: [1.45, 2.35, -1.15], target: [3.55, 1.25, -3.45] },
-  writing: { position: [-1.45, 2.15, -2.15], target: [-1.45, 1.7, -4.62] },
-  location: { position: [2.05, 2.25, -2.05], target: [2.05, 1.85, -4.62] },
-  hobbies: { position: [-0.65, 1.95, 3.35], target: [-3.35, 0.7, 1.55] },
-  contact: { position: [1.25, 2.05, 3.05], target: [3.65, 0.65, 0.85] },
+  home: { position: [5.85, 3.15, 6.55], target: [0.05, 1.15, -0.55] },
+  about: { position: [-1.05, 1.95, 1.55], target: [-4.05, 1.35, -1.85] },
+  work: { position: [0.85, 1.85, -0.35], target: [0.55, 0.85, -3.35] },
+  awards: { position: [1.55, 2.05, -0.85], target: [3.55, 1.2, -3.45] },
+  writing: { position: [-1.35, 1.95, -2.05], target: [-1.45, 1.55, -4.62] },
+  location: { position: [2.05, 2.05, -1.85], target: [2.05, 1.7, -4.62] },
+  hobbies: { position: [-0.45, 1.55, 3.15], target: [-3.35, 0.55, 1.55] },
+  contact: { position: [1.45, 1.65, 2.85], target: [3.65, 0.7, 0.85] },
 };

@@ -30,10 +30,10 @@ export function CameraRig() {
     <CameraControls
       ref={controlsRef}
       makeDefault
-      minPolarAngle={0.4}
-      maxPolarAngle={1.38}
-      minDistance={4.2}
-      maxDistance={16}
+      minPolarAngle={0.55}
+      maxPolarAngle={1.32}
+      minDistance={4.6}
+      maxDistance={12}
     />
   );
 }
